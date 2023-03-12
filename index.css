@@ -1,0 +1,246 @@
+html { scroll-behavior: smooth; }
+body{
+  background-color: #f8f8f8;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: navkd 2s ease-out;
+}
+@keyframes navkd {
+  0%,50%{
+    top: -100%;
+  }100%{
+    top: 0;
+  }
+}
+nav ul{
+  display: flex;
+  width: 416px;
+  transition: all .2s;
+}
+nav li{
+  list-style: none;
+  margin: 15px 20px;
+}
+nav li a{
+  text-decoration: none;
+  color: #666;
+  padding: 5px 10px;
+  display: block;
+  transition: all .2s ease-in-out;
+  white-space: nowrap;
+}
+nav li:hover a{
+  background-color: #666;
+  color: #f8f8f8;
+  box-shadow: 0 1px 5px #666;
+}
+nav li:active a{
+  box-shadow: 0 1px 1px #000;
+}
+main{
+  padding-top: 100px;
+}
+@media(max-width:500px){
+  nav ul{
+    width: 296px;
+  }
+  nav li{
+    margin: 5px 10px;
+  }
+  nav li a{
+    padding: 2px 5px;
+  }
+  main{
+    padding-top: 60px;
+  }
+}
+
+
+
+main .sim-card{
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0;
+  animation: simcdkd 2s;
+}
+@keyframes simcdkd {
+  0%,50%{
+    height: calc(100vh - 280px);
+  }100%{
+    height: 200px;
+  }
+}
+main .sim-card img#top-img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transition: all .3s;
+  transform-origin: center center;
+  box-shadow: 0 1px 5px #0002;
+  animation: simimgkd .6s;
+}
+@keyframes simimgkd {
+  0%{
+    transform: translateY(20px);
+    opacity: 0;
+  }100%{
+    transform: none;
+    opacity: 1;
+  }
+}
+main .sim-card:hover img#top-img{
+  width: 160px;
+  height: 160px;
+  transform: rotate(360deg);
+}
+main .sim-card p{
+  line-height: 30px;
+  margin-top: 10px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  animation: simpkd 1.2s;
+}
+@keyframes simpkd {
+  0%,50%{
+    transform: translateY(20px);
+    opacity: 0;
+  }100%{
+    transform: none;
+    opacity: 1;
+  }
+}
+main .projects{
+  margin-top: 60px;
+}
+main h1{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: #0003 0 1px 5px;
+  padding-top: 60px;
+}
+main h1 a{
+  padding: 0 .5em;
+}
+main .projects .project-con{
+  overflow: hidden;
+  width: 800px;
+  margin: 20px auto;
+}
+main .projects .proj{
+  width: 360px;
+  height: 120px;
+  float: left;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #0003;
+  cursor: pointer;
+  transition: all .3s;
+}
+main .projects .proj:hover{
+  box-shadow: 1px 3px 10px #0003;
+}
+main .proj img.t{
+  float: left;
+  display: block;
+  width: 70px;
+  margin: 25px 10px;
+}
+main .proj .message{
+  float: left;
+  width: 270px;
+  position: relative;
+  height: 120px;
+}
+main .proj .message .title{
+  line-height: 40px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #000;
+  text-shadow: 0 1px 3px #0002;
+}
+main .proj .message .intro{
+  font-size: 12px;
+  text-indent: 2em;
+}
+main .proj .message .status{
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  font-size: 12px;
+  margin: 5px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: green;
+  color: #fff;
+}
+main .proj .message .status.gz{
+  background-color: #666;
+}
+main .proj .message .status.do{
+  background-color: #00baff;
+}
+@media(max-width:800px){
+  main .projects .project-con{
+    width: 100%;
+    margin: 20px 0;
+  }
+  main .projects .proj{
+    width:calc(100% - 40px);
+  }
+  main .projects .proj .message{
+    width: calc(100% - 90px);
+  }
+}
+main .aboutme{
+  margin-top: 40px;
+}
+main .aboutme p,
+  main .links p{
+  line-height: 40px;
+  text-align: center;
+  font-size: 17px;
+  color: #222;
+}
+main .aboutme .a p{
+  color: #555;
+}
+main .aboutme hr{
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  border-bottom: #555;
+}
+main .aboutme h1{
+  margin-bottom: 1em;
+}
+main .fold{
+  display: none;
+}
+main input[data-for]{
+  display: none;
+}
+main input[data-for]~label{
+  cursor: pointer;
+}
+main input[data-for]:checked~label::before{
+  transform: rotate(90deg);
+}

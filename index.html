@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>陈思全的小站</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="/blog">博客</a></li>
+      <li><a href="#aboutme">关于我</a></li>
+      <li><a href="#projects">项目</a></li>
+      <li><a href="#links">友情链接</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="sim-card">
+      <img id="top-img" src="./favicon.ico" alt="">
+      <p id="intro-name">I'm <span class="name">陈思全</span></p>
+      <p id="intro-sim">一个热爱开发的初中生</p>
+    </div>
+    <div class="aboutme">
+      <a name="aboutme"></a>
+      <h1><a class="bi bi-info"></a>关于我</h1>
+      <div class="a">
+        <p>任何事情都不是一蹴而就的</p>
+        <p>唯有热爱与坚持</p>
+        <p>才能创造新的世界</p>
+        <p>&nbsp;</p>
+        <p>Hello , World !</p>
+        <p>&nbsp;</p>
+      </div>
+      <hr>
+      <div class="b">
+        <p>&nbsp;</p>
+        <p><b>简介</b></p>
+        <p>&nbsp;</p>
+        <p>我是陈思全</p>
+        <p>是一个热爱开发的初中生</p>
+        <p>家乡在江西赣州全南</p>
+        <p>&nbsp;</p>
+        <p>我的技能：</p>
+        <p>HTML、CSS、JavaScript、NodeJS(在学)</p>
+        <p>&nbsp;</p>
+        <p><b>为什么热爱开发？</b></p>
+        <p>&nbsp;</p>
+        <p><input type="checkbox" name="devh" data-for="dev-history">
+        <label class="bi bi-chevron-right" for="devh" onclick="var a=document.querySelector('[name=\'devh\']');a.click()"><i>了解我的开发史</i></label></p>
+        <p>&nbsp;</p>
+        <div class="fold" data-name="dev-history">
+          <p>我的爸爸在以前是修电脑的</p>
+          <p>所以，我在小时候就接触过电脑</p>
+          <p>我那时总会想</p>
+          <p><i>电脑是如何工作的？</i></p>
+          <p><i>应用程序是如何编写出来的？</i></p>
+          <p>&nbsp;</p>
+          <p>后来，在五年级时，我开始使用<b>AIDE</b>编写Android应用</p>
+          <p>我很享受自己编写的程序成功运行起来的满足感</p>
+          <p>&nbsp;</p>
+          <p>但六年级时，我的手机被没收了</p>
+          <p>我只能偶尔玩一下我爸的电脑</p>
+          <p>然后，我开始接触网页的开发</p>
+          <p>&nbsp;</p>
+          <p>令我惊喜的是</p>
+          <p>使用HTML+CSS+JS编写网页</p>
+          <p>不仅更简单，能实现的功能和界面也十分丰富</p>
+          <p>于是我开始深入学习</p>
+          <p>&nbsp;</p>
+          <p>直到如今</p>
+          <p>我也应该是一个初级前端开发者了</p>
+          <p>&nbsp;</p>
+        </div>
+        <p>开发让我变得快乐，满足，且充实</p>
+        <p>它让我有了理想，有了目标</p>
+        <p>让我朝着正确的方向前进</p>
+        <p>&nbsp;</p>
+        <p><b>关注我的动态</b></p>
+        <p>&nbsp;</p>
+        <p>我的Blog：<a href="/blog/" target="_blank">siquan001.github.io/blog</a></p>
+        <p>我的Github：<a href="https://github.com/siquan001/" target="_blank">github.com/siquan001</a></p>
+        <p>我的Email：<a href="mailto:chensiquan2022@163.com">chensiquan2022@163.com</a></p>
+        <p>我的QQ空间：<a href="https://user.qzone.qq.com/2167967783" target="_blank">2167967783</a></p>
+      </div>
+
+    </div>
+    <div class="projects">
+      <a name="projects"></a>
+      <h1><a class="bi bi-bar-chart-steps"></a>项目</h1>
+      <div class="project-con">
+        <div class="proj">
+          <img src="./favicon.ico" alt="" class="t">
+          <div class="message">
+            <div class="title">我的博客</div>
+            <div class="intro">我的博客(Use <a href="https://hexo.io/" target="_blank">Hexo</a> )</div>
+            <div class="status do">已完成</div>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="./img/windows10_icon.png" alt="" class="t">
+          <div class="message">
+            <div class="title">Windows 10网页版</div>
+            <div class="intro">使用标准网页技术复刻Windows10体验</div>
+            <div class="status gz">已搁置</div>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="./img/simplewriter.png" alt="" class="t">
+          <div class="message">
+            <div class="title">Simple Writer</div>
+            <div class="intro">一个简洁、快速、美观的Markdown写作软件(借鉴于 <a target="_blank"
+                href="https://clearwriter.gitee.io/clearwriter-online/">Clear Writer</a>)</div>
+            <div class="status kf">开发中</div>
+          </div>
+        </div>
+        <div class="proj">
+          <img src="./img/xiaodiary_icon.png" alt="" class="t">
+          <div class="message">
+            <div class="title">小日记</div>
+            <div class="intro">一个专注隐私的本地化日记软件</div>
+            <div class="status kf">开发中</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="links">
+      <a name="links"></a>
+      <h1><a class="bi bi-link-45deg"></a>友情链接</h1>
+      <p>&nbsp;</p>
+      <p>海内存知己，天涯若比邻</p>
+      <p>我欢迎所有志同道合的人与我合作开发或探讨</p>
+      <p>我也愿意与其它志同道合的人合作开发或探讨</p>
+      <p>若想加入友情链接，欢迎<a href="mailto:chensiquan2022@163.com" onclick="alert('chensiquan2022@163.com');">Email</a></p>
+      <p>&nbsp;</p>
+    </div>
+  </main>
+</body>
+<script src="./index.js"></script>
+
+</html>
