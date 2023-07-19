@@ -1,246 +1,223 @@
-html { scroll-behavior: smooth; }
-body{
-  background-color: #f8f8f8;
-}
 *{
   margin: 0;
   padding: 0;
+  transition: all .4s;
 }
+body{
+  background-color: #fff;
+  color:#01010e;
+}
+
 nav{
+  width: 100%;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: inherit;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  animation: navkd 2s ease-out;
+  z-index:99;
 }
-@keyframes navkd {
-  0%,50%{
-    top: -100%;
-  }100%{
-    top: 0;
-  }
+nav .logo{
+  width: 100px;
+  height: 80px;
+  float: left;
+}
+nav .logo img{
+  width: 50px;
+  height: 50px;
+  margin: 15px 25px;
+  box-shadow: #eee 0 1px 5px;
+  border-radius: 50%;
 }
 nav ul{
-  display: flex;
-  width: 416px;
-  transition: all .2s;
+  float: right;
 }
-nav li{
+nav ul li{
+  float: left;
+  height: 50px;
+  margin: 15px;
   list-style: none;
-  margin: 15px 20px;
 }
-nav li a{
+nav ul li a{
+  padding: 0 15px;
+  line-height: 50px;
   text-decoration: none;
-  color: #666;
-  padding: 5px 10px;
-  display: block;
-  transition: all .2s ease-in-out;
-  white-space: nowrap;
+  font-size: 17px;
+  color: #888;
 }
-nav li:hover a{
-  background-color: #666;
-  color: #f8f8f8;
-  box-shadow: 0 1px 5px #666;
+nav ul li a.act,
+nav ul li a:hover{
+  color: #000;
 }
-nav li:active a{
-  box-shadow: 0 1px 1px #000;
+.p{
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
-main{
-  padding-top: 100px;
+.p1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@media(max-width:500px){
-  nav ul{
-    width: 296px;
+.p1 h1{
+  padding-bottom: 100px;
+  font-weight: 300;
+  font-size: 40px;
+}
+.p>i{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  animation: fd 1s infinite linear;
+}
+@keyframes fd {
+  0%{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    bottom: 60px;
+  }50%{
+    background-color: #eee;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    bottom: 50px;
+  }100%{
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    bottom: 35px;
   }
-  nav li{
-    margin: 5px 10px;
-  }
-  nav li a{
-    padding: 2px 5px;
-  }
-  main{
-    padding-top: 60px;
-  }
 }
-
-
-
-main .sim-card{
+.p2 h1,.p3 h1,.p4 h1{
+  line-height: 60px;
+  text-align: center;
+  padding: 80px 0;
+  font-weight: 300;
+  font-size: 36px;
+}
+.p2 .px{
+  width: 400px;
+  height: 400px;
   margin: 0 auto;
-  width: 300px;
+  transition: all .7s;
+}
+.p2 .pe{
+  width: 400px;
+  height: 400px;
+  float: left;
+}
+.p2 .pe.pe2{
+  width: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .7s;
+}
+.p2 .px:hover{
+  width: 800px;
+}
+.p2 .px:hover .pe2{
+  width: 400px;
+  opacity: 1;
+}
+.p2 .pr{
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 40px;
+  width: 500px;
+  margin: 0 auto;
+}
+.p2 .pe2 .pr{
+  padding: 10px 20px;
+}
+.p3 h1{
+  padding: 50px 0;
+}
+.p3 .cf{
+  width: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.p3 .c{
+  float: left;
+  width: 226.6px;
+  height: 130px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: #eee 0 1px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 0;
-  animation: simcdkd 2s;
 }
-@keyframes simcdkd {
-  0%,50%{
-    height: calc(100vh - 280px);
-  }100%{
-    height: 200px;
-  }
+.p3 .c:hover{
+  transform: translateY(-10px);
+  box-shadow: #aaa 0 2px 10px;
 }
-main .sim-card img#top-img{
-  display: block;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  transition: all .3s;
-  transform-origin: center center;
-  box-shadow: 0 1px 5px #0002;
-  animation: simimgkd .6s;
-}
-@keyframes simimgkd {
-  0%{
-    transform: translateY(20px);
-    opacity: 0;
-  }100%{
-    transform: none;
-    opacity: 1;
-  }
-}
-main .sim-card:hover img#top-img{
-  width: 160px;
-  height: 160px;
-  transform: rotate(360deg);
-}
-main .sim-card p{
-  line-height: 30px;
-  margin-top: 10px;
-  font-size: 20px;
-  letter-spacing: 3px;
-  animation: simpkd 1.2s;
-}
-@keyframes simpkd {
-  0%,50%{
-    transform: translateY(20px);
-    opacity: 0;
-  }100%{
-    transform: none;
-    opacity: 1;
-  }
-}
-main .projects{
-  margin-top: 60px;
-}
-main h1{
+.p3 .c .title{
   text-align: center;
   font-size: 24px;
-  font-weight: 400;
-  text-shadow: #0003 0 1px 5px;
-  padding-top: 60px;
+  
 }
-main h1 a{
-  padding: 0 .5em;
+.p3 .c .range{
+  width: 160px;
+  height: 2px;
+  background-color: #ccc;
+  margin: 10px 0;
 }
-main .projects .project-con{
-  overflow: hidden;
-  width: 800px;
-  margin: 20px auto;
+.p3 .c .range div{
+  height: 2px;
+  background-color: #333;
 }
-main .projects .proj{
-  width: 360px;
-  height: 120px;
-  float: left;
-  margin: 20px;
-  border-radius: 5px;
-  box-shadow: 0 1px 5px #0003;
-  cursor: pointer;
-  transition: all .3s;
-}
-main .projects .proj:hover{
-  box-shadow: 1px 3px 10px #0003;
-}
-main .proj img.t{
-  float: left;
-  display: block;
-  width: 70px;
-  margin: 25px 10px;
-}
-main .proj .message{
-  float: left;
-  width: 270px;
-  position: relative;
-  height: 120px;
-}
-main .proj .message .title{
-  line-height: 40px;
-  margin-top: 10px;
-  font-size: 20px;
-  color: #000;
-  text-shadow: 0 1px 3px #0002;
-}
-main .proj .message .intro{
+.p3 .c .exp{
+  color: #888;
   font-size: 12px;
-  text-indent: 2em;
-}
-main .proj .message .status{
-  position: absolute;
-  left: 0;
-  bottom: 3px;
-  font-size: 12px;
-  margin: 5px;
-  padding: 4px;
-  border-radius: 4px;
-  background-color: green;
-  color: #fff;
-}
-main .proj .message .status.gz{
-  background-color: #666;
-}
-main .proj .message .status.do{
-  background-color: #00baff;
-}
-@media(max-width:800px){
-  main .projects .project-con{
-    width: 100%;
-    margin: 20px 0;
-  }
-  main .projects .proj{
-    width:calc(100% - 40px);
-  }
-  main .projects .proj .message{
-    width: calc(100% - 90px);
-  }
-}
-main .aboutme{
-  margin-top: 40px;
-}
-main .aboutme p,
-  main .links p{
-  line-height: 40px;
   text-align: center;
-  font-size: 17px;
-  color: #222;
+  line-height: 18px;
 }
-main .aboutme .a p{
-  color: #555;
-}
-main .aboutme hr{
-  display: block;
+.p4 .mb{
+  width: 600px;
   margin: 0 auto;
-  width: 200px;
-  border-bottom: #555;
 }
-main .aboutme h1{
-  margin-bottom: 1em;
+.p4 .m{
+  font-size: 20px;
+  line-height: 30px;
+  padding: 10px;
 }
-main .fold{
-  display: none;
+.bilibili-icon::before{
+  content:'';
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="533"><path d="M306.005333 117.632L444.330667 256h135.296l138.368-138.325333a42.666667 42.666667 0 0 1 60.373333 60.373333L700.330667 256H789.333333A149.333333 149.333333 0 0 1 938.666667 405.333333v341.333334a149.333333 149.333333 0 0 1-149.333334 149.333333h-554.666666A149.333333 149.333333 0 0 1 85.333333 746.666667v-341.333334A149.333333 149.333333 0 0 1 234.666667 256h88.96L245.632 177.962667a42.666667 42.666667 0 0 1 60.373333-60.373334zM789.333333 341.333333h-554.666666a64 64 0 0 0-63.701334 57.856L170.666667 405.333333v341.333334a64 64 0 0 0 57.856 63.701333L234.666667 810.666667h554.666666a64 64 0 0 0 63.701334-57.856L853.333333 746.666667v-341.333334A64 64 0 0 0 789.333333 341.333333zM341.333333 469.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v85.333333a42.666667 42.666667 0 0 1-85.333333 0v-85.333333a42.666667 42.666667 0 0 1 42.666666-42.666667z m341.333334 0a42.666667 42.666667 0 0 1 42.666666 42.666667v85.333333a42.666667 42.666667 0 0 1-85.333333 0v-85.333333a42.666667 42.666667 0 0 1 42.666667-42.666667z" p-id="534"></path></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-main input[data-for]{
-  display: none;
+.p5{
+  width: 100%;
+  height: 400px;
+  background-color: #f4f4f4;
 }
-main input[data-for]~label{
-  cursor: pointer;
+.p5 h1{
+  font-size: 24px;
+  padding: 20px;
 }
-main input[data-for]:checked~label::before{
-  transform: rotate(90deg);
+.p5 a{
+  margin: 20px;
+  display: block;
+  float: left;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #09f;
+  text-decoration: none;
 }
