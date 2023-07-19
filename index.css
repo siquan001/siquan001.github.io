@@ -185,7 +185,8 @@ nav ul li a:hover{
   line-height: 18px;
 }
 .p4 .mb{
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
 .p4 .m{
@@ -220,4 +221,42 @@ nav ul li a:hover{
   border-radius: 10px;
   color: #09f;
   text-decoration: none;
+}
+
+@media(max-width:800px){
+  nav .logo{
+    width: 70px;
+    height: 70px;
+  }
+  nav .logo img{
+    margin: 10px;
+  }
+  nav ul li{
+    margin: 10px;
+  }
+  .p1 h1{
+    font-size: 24px;
+  }
+  .p2,.p3,.p4{
+    height: auto!important;
+    padding-bottom: 150px;
+  }
+  .p2 .px{
+    width: 100%!important;
+    height: auto!important;
+    overflow: hidden;
+  }
+  .p2 .pe{
+    width: 100%!important;
+  }
+  .p2 .pe2{
+    opacity: 1!important;
+  }
+  .p3 .cf{
+    width: 100%!important;
+    overflow: hidden;
+  }
+  .p3 .c{
+    width: calc(100% - 40px);
+  }
 }
