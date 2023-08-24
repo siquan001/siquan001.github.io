@@ -7,6 +7,7 @@
   <title>陈思全的小站</title>
   <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./waifu.css">
 </head>
 <body>
   <nav>
@@ -14,9 +15,9 @@
       <img src="./favicon.ico" alt="">
     </div>
     <ul>
-      <li><a href="./" class="act">首页</a></li>
-      <li><a href="./blog/">博客</a></li>
-      <li><a href="#friendlink">友情链接</a></li>
+      <li><a class="headerlink1" href="./" class="act">首页</a></li>
+      <li><a class="headerlink2" href="./blog/">博客</a></li>
+      <li><a class="headerlink3" href="#friendlink">友情链接</a></li>
     </ul>
   </nav>
   <div class="p p1">
@@ -119,12 +120,12 @@
         </div>
         <div class="exp">爬取酷狗音乐的数据做的音乐网站（不能听VIP歌）</div>
       </div>
-      <div class="c">
+      <div class="c" onclick="window.open('/quik/')">
         <div class="title">QUIK 起始页</div>
         <div class="range">
-          <div style="width: 50%;"></div>
+          <div style="width: 100%;"></div>
         </div>
-        <div class="exp">一个既简单，又实用，既丰富，又不臃肿的浏览器起始页（开发中，8月10日上线）</div>
+        <div class="exp">一个既简单，又实用，既丰富，又不臃肿的浏览器起始页</div>
       </div>
       <div class="c">
         <div class="exp">项目要多也要精</div>
@@ -147,8 +148,29 @@
     <h1>友情链接</h1>
     <a href="https://api.gmit.vip/" target="_blank">故梦API</a>
     <a href="https://stear.cn/"><img style="width:21px;float:left;" src="https://stear.cn/data/image/icon/InsightfulSearch.v3.png"/>聚源千意</a>
-    <a href="mailto:chensiquan2022@163.com" target="_blank" rel="noopener noreferrer">快快发送Email添加友链吧！</a>
+    <a class="addfriendslink" href="mailto:chensiquan2022@163.com" target="_blank" rel="noopener noreferrer">快快发送Email添加友链吧！</a>
+  </div>
+  <div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
   </div>
 </body>
+<!-- waifu-tips.js 依赖 JQuery 库 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+<!-- 实现拖动效果，需引入 JQuery UI -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    
+<script src="https://live2d.fghrsh.net/assets/1.4.2/live2d.min.js"></script>
+<script src="./mytip.js"></script>
 <script src="./index.js"></script>
 </html>
