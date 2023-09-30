@@ -5,174 +5,116 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>陈思全的小站</title>
-  <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./favicon.ico">
   <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./waifu.css">
 </head>
 <body>
-  <script>alert('目前由于一些变故，主站正在进行重新搭建，你现在访问的是旧版网页。')</script>
-  <nav>
-    <div class="logo">
-      <img src="./favicon.ico" alt="">
-    </div>
+  <div class="bgcover"></div>
+  <div class="leftnav">
+    <img src="./favicon.ico" alt="">
+    <p class="name">热爱前端的陈思全</p>
+    <p class="says">海内存知己，天涯若比邻。</p>
     <ul>
-      <li><a class="headerlink1" href="./" class="act">首页</a></li>
-      <li><a class="headerlink2" href="./blog/">博客</a></li>
-      <li><a class="headerlink3" href="#friendlink">友情链接</a></li>
+      <li data-class="about">自我介绍</li>
+      <li data-class="project">我的项目</li>
+      <li onclick="window.open('https://siquan001.github.io/blog/')">我的博客</li>
+      <li data-class="friends">我的小伙伴们</li>
+      <li data-class="callme">联系我</li>
+      <li onclick="window.open('https://github.com/siquan001/')">我的Github</li>
+      <li onclick="window.open('https://space.bilibili.com/1818866063')"><b>到B站关注我!</b></li>
     </ul>
-  </nav>
-  <div class="p p1">
-    <h1>欢迎来到陈思全的小站</h1>
-    <i class="bi bi-mouse"></i>
   </div>
-  <div class="p p2">
-    <h1>自我介绍</h1>
-    <div class="px">
-      <div class="pe">
-        <div class="pr">👋 大家好</div>
-        <div class="pr">我是陈思全</div>
-        <div class="pr">一个热爱前端开发的初中生</div>
-      </div>
-      <div class="pe pe2">
-        <div class="pr">最喜欢的颜色：<span style="color: #09f;">天蓝色</span></div>
-        <div class="pr">最喜欢的一句话：</div>
-        <div class="pr"><i>海内存知己，天涯若比邻。</i></div>
-        <div class="pr">其他爱好：魔方（&lt;30s）</div>
-      </div>
+  <div class="rightcontent">
+    <div class="page about">
+      <h1>自我介绍</h1>
+      <p>👋 大家好</p>
+      <p>我是陈思全</p>
+      <p>一个热爱前端开发的初中生</p>
+      <h2>我的技能</h2>
+      <p>熟练HTML+CSS，会<abbr title="就是很多，这里这么说是谦虚了">一点</abbr>JavaScript，也会一点NodeJS</p>
+      <p>UI设计懂一些，但项目通常懒得打磨UI</p>
+      <p>不太会做视频，但喜欢做视频（<b>明示到<a href="https://space.bilibili.com/1818866063" target="_blank">B站</a>看我的视频！</b>）</p>
+      <h2>开发理念</h2>
+      <p>项目以实用为主，坚持做能够为自己和别人带来 方便或开心 的项目</p>
+      <p>尽量不要使用别人的UI框架</p>
+      <p>己所不欲勿施于人，所有项目非特殊情况下全部开源、免费、无广</p>
+      <p><i>就算到目前为止也没做出几个项目~</i></p>
+      <h2>我的其它</h2>
+      <p>我是一个很懒但十分乐观的人，擅长数英理化。</p>
+      <p>最喜欢的颜色是：<span style="color: #09f;">#09f</span></p>
+      <p>最喜欢的一句话是：海内存知己，天涯若比邻。</p>
+      <p><br></p>
+      <p>我平常喜欢刷B站，最喜欢的UP主是 Warma</p>
+      <p>因为觉得它的视频很有趣</p>
+      <p><br></p>
+      <p>我比较喜欢听音乐，普通音乐和纯音乐都喜欢听</p>
+      <p>最喜欢的歌手是艾索、朴树、晚巧、Warma ()</p>
+      <p>因为我觉得<del>你管我</del>的原因</p>
+      <p><br></p>
+      <p>我会玩魔方（仅三阶），目前记录：17.5s，平均成绩：22s</p>
+      <p>&nbsp;&nbsp;&nbsp;<i>允许我想嘚瑟一下~</i></p>
+      <p><br></p>
+      <p>十分擅长白嫖，坚定着</p>
+      <p>&nbsp;&nbsp;&nbsp;<i>如果一个东西付费，那么就去找免费，找不到的话就自己做，做不了的话就算了~</i></p>
+      <p>的原则</p>
     </div>
-    <i class="bi bi-cursor"></i>
-  </div>
-  <div class="p p3">
-    <h1>我的技能</h1>
-    <div class="cf">
-      <div class="c">
-        <div class="title">HTML</div>
-        <div class="range">
-          <div style="width: 90%;"></div>
-        </div>
-        <div class="exp">HTML语言是一个很简单的标记语言，不是吗？</div>
-      </div>
-      <div class="c">
-        <div class="title">CSS</div>
-        <div class="range">
-          <div style="width: 60%;"></div>
-        </div>
-        <div class="exp">2D已熟练，3D放一边。</div>
-      </div>
-      <div class="c">
-        <div class="title">Javascript</div>
-        <div class="range">
-          <div style="width: 50%;"></div>
-        </div>
-        <div class="exp">别人花十天设计出来的语言够你学十年。</div>
-      </div>
-      <div class="c">
-        <div class="title">NodeJS</div>
-        <div class="range">
-          <div style="width: 30%;"></div>
-        </div>
-        <div class="exp">express还是会的。</div>
-      </div>
-      <div class="c">
-        <div class="title">Markdown</div>
-        <div class="range">
-          <div style="width: 100%;"></div>
-        </div>
-        <div class="exp">感觉放这是凑数的</div>
-      </div>
-      <div class="c">
-        <div class="title">写作</div>
-        <div class="range">
-          <div style="width: 50%;"></div>
-        </div>
-        <div class="exp">灵感源自生活</div>
-      </div>
+    <div class="page project">
+      <h1>我的项目</h1>
+      <ul class="projectlist">
+        <li>
+          <div class="title">Win10online</div>
+          <div class="exp">用标准网络技术复刻Windows 10体验，是我的早期代表作之一，目前已搁置</div>
+          <div class="link">
+            <a href="https://github.com/siquan001/Win10online" target="_blank" class="githublink">Github仓库</a>
+            <a href="https://siquan001.github.io/Win10online" target="_blank">在线预览</a>
+          </div>
+        </li>
+        <li>
+          <div class="title">QUIK起始页</div>
+          <div class="exp">一个简洁、实用、无广告的浏览器主页，目前持续更新！</div>
+          <div class="link">
+            <a href="https://siquan001.github.io/quik" target="_blank">在线预览</a>
+          </div>
+        </li>
+        <li>
+          <div class="title">Simple Writer</div>
+          <div class="exp">一个简单的写作软件（BUG有那么一点多），目前停止更新</div>
+          <div class="link">
+            <a href="https://simple-writer.github.io/" target="_blank" class="second">项目介绍</a>
+            <a href="https://simple-writer.github.io/simple-writer-online" target="_blank">在线预览</a>
+          </div>
+        </li>
+        <li>
+          <div class="title">Fh音乐</div>
+          <div class="exp">免费的听歌和下载歌曲的网站，歌曲来源于酷狗音乐（VIP歌曲无法获取，本人也不承认有VIP歌曲免费听或下载的方法）</div>
+          <div class="link">
+            <a href="https://siquan001.github.io/myshow/fhmusic" target="_blank" class="second">旧版</a>
+            <a href="https://siquan001.github.io/fhmusic" target="_blank">新版</a>
+          </div>
+        </li>
+        <li>
+          <div class="title">其它小项目</div>
+          <div class="exp">一些小的非正式项目放在Github的myshow存储库</div>
+          <div class="link">
+            <a href="https://github.com/siquan001/myshow" target="_blank" class="githublink">Github仓库</a>
+            <a href="https://siquan001.github.io/myshow/" target="_blank">项目预览</a>
+          </div>
+        </li>
+      </ul>
     </div>
-    <i class="bi bi-code-slash"></i>
-  </div>
-  <div class="p p3">
-    <h1>我的项目</h1>
-    <div class="cf">
-      <div class="c" onclick="window.open('/blog/')">
-        <div class="title">我的博客</div>
-        <div class="range">
-          <div style="width: 100%;"></div>
-        </div>
-        <div class="exp">使用Hexo搭建（不常更新）</div>
-      </div>
-      <div class="c" onclick="window.open('/Win10online')">
-        <div class="title">Windows 10 online</div>
-        <div class="range">
-          <div style="width: 70%;"></div>
-        </div>
-        <div class="exp">使用标准网络技术（HTML,CSS,JS）复刻Windows10体验。（已搁置）</div>
-      </div>
-      <div class="c" onclick="window.open('https://simple-writer.github.io/')">
-        <div class="title">Simple Writer</div>
-        <div class="range">
-          <div style="width: 90%;"></div>
-        </div>
-        <div class="exp">自己做的一个简单的写作软件。（公测中）</div>
-      </div>
-      <div class="c" onclick="window.open('/fhmusic/')">
-        <div class="title">Fh音乐</div>
-        <div class="range">
-          <div style="width: 100%;"></div>
-        </div>
-        <div class="exp">爬取酷狗音乐的数据做的音乐网站（不能听VIP歌）</div>
-      </div>
-      <div class="c" onclick="window.open('/quik/')">
-        <div class="title">QUIK 起始页</div>
-        <div class="range">
-          <div style="width: 100%;"></div>
-        </div>
-        <div class="exp">一个既简单，又实用，既丰富，又不臃肿的浏览器起始页</div>
-      </div>
-      <div class="c">
-        <div class="exp">项目要多也要精</div>
-      </div>
+    <div class="page friends">
+      <h1>我的小伙伴们</h1>
+      <ul class="friendlist"></ul>
     </div>
-    <i class="bi bi-pin-angle"></i>
-  </div>
-  <div class="p p4">
-    <h1>关注我</h1>
-    <div class="mb">
-      <div class="m bi bi-envelope"> Email:<a href="mailto:chensiquan2022@163.com">chensiquan2022@163.com</a></div>
-      <div class="m bi bi-tencent-qq"> Q Q : <a href="https://user.qzone.qq.com/2167967783">2167967783</a></div>
-      <div class="m bi bi-github"> Github:<a href="https://github.com/siquan001">siquan001</a></div>
-      <div class="m bilibili-icon"> B 站 : <a href="https://space.bilibili.com/1818866063">我是陈思全</a> </div>
-    </div>
-    <i class="bi bi-activity"></i>
-  </div>
-  <div class="p5">
-    <a name="friendlink"></a>
-    <h1>友情链接</h1>
-    <a href="https://api.gmit.vip/" target="_blank">故梦API</a>
-    <a href="https://stear.cn/"><img style="width:21px;float:left;" src="https://stear.cn/data/image/icon/InsightfulSearch.v3.png"/>聚源千意</a>
-      <a href="https://edgebook.link/" target="_blank">edgebook</a>
-    <a class="addfriendslink" href="mailto:chensiquan2022@163.com" target="_blank" rel="noopener noreferrer">快快发送Email添加友链吧！</a>
-  </div>
-  <div class="waifu">
-    <div class="waifu-tips"></div>
-    <canvas id="live2d" class="live2d"></canvas>
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-chat"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-user"></span>
-        <span class="fui-photo"></span>
-        <span class="fui-info-circle"></span>
-        <span class="fui-cross"></span>
+    <div class="page callme">
+      <h1>联系我</h1>
+      <p>QQ：2167967783</p>
+      <p>Email：chensiquan2022@163.com</p>
+      <p>Email2：2167967783@qq.com</p>
+      <p>Github：<a href="https://github.com/siquan001/" target="_blank">siquan001</a></p>
+      <p>哔哩哔哩：<a href="https://space.bilibili.com/1818866063" target="_blank">热爱前端的陈思全（UID：1818866063）</a></p>
     </div>
   </div>
 </body>
-<!-- waifu-tips.js 依赖 JQuery 库 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
-<!-- 实现拖动效果，需引入 JQuery UI -->
-<script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    
-<script src="https://live2d.fghrsh.net/assets/1.4.2/live2d.min.js"></script>
-<script src="./mytip.js"></script>
 <script src="./index.js"></script>
 </html>
