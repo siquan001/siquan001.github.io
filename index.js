@@ -63,12 +63,6 @@ document.querySelectorAll('.leftnav ul li[data-class]').forEach(function(li){
   }
 })
 
-if(window.innerWidth>=700){
-  setTimeout(function(){
-    document.querySelector('.leftnav ul li[data-class="about"]').click();
-  },100)
-}
-
 var xhr=new XMLHttpRequest();
 xhr.open('get','./friendlink.json');
 xhr.onreadystatechange=function(){
@@ -103,6 +97,11 @@ function chuli(){
   }else{
     document.querySelector(".rightcontent").classList.remove('show');
     document.querySelector(".leftnav").classList.remove('hide');
+    if(window.innerWidth>=700){
+      setTimeout(function(){
+        document.querySelector('.leftnav ul li[data-class="about"]').click();
+      },100)
+    }
   }
 }
 chuli();
