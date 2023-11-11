@@ -1,0 +1,268 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #666;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.bgcover{
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.loliapi.cn/acg/);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top:0;
+  left:0;
+  filter: blur(10px);
+  opacity: .7;
+}
+
+.leftnav{
+  width: 300px;
+  height: calc(100% - 60px);
+  background-color: #fff;
+  position: absolute;
+  top:30px;
+  left:30px;
+  border-radius: 20px;
+  overflow: auto;
+}
+.leftnav img{
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  margin-bottom: 20px;
+  display: block;
+  box-shadow: #aaa 0 1px 5px;
+  border-radius: 50%;
+}
+.leftnav p.name {
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.leftnav p.says{
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  user-select: none;
+  color: #555;
+  height: 30px;
+}
+.leftnav ul{
+  width: 100%;
+  padding-top: 20px;
+}
+.leftnav ul li{
+  padding-left: 40px;
+  width: calc(100% - 50px);
+  line-height: 30px;
+  margin: 5px;
+  list-style:none;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s;
+}
+.leftnav ul li.act{
+  font-size: 20px;
+  font-weight: 600;
+}
+.leftnav ul li::before{
+  content:'';
+  width: 0px;
+  height: 20px;
+  background-color: #09f;
+  position: absolute;
+  top:5px;
+  left:10px;
+  transition: all .3s;
+}
+.leftnav ul li.act::before,
+.leftnav ul li:hover::before
+{
+  width: 4px;
+}
+.leftnav ul li:hover{
+  font-size: 17px;
+}
+.leftnav ul li:active{
+  font-size: 14px;
+}
+.rightcontent{
+  width: calc(100% - 390px);
+  height: calc(100% - 60px);
+  background-color: #fff;
+  position: absolute;
+  top:30px;
+  left:360px;
+  border-radius: 20px;
+}
+.rightcontent .page{
+  margin: 20px;
+  line-height: 30px;
+  font-size: 16px;
+  height: calc(100% - 40px);
+  overflow: auto;
+  display: none;
+  animation: fadein .5s;
+}
+@media(max-width:700px){
+  .rightcontent{
+    display: none;
+  }
+  .rightcontent.show,
+  .leftnav
+  {
+    display: block;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    left:5px;
+    top:5px;
+  }
+  .leftnav.hide{
+    display: none;
+  }
+}
+@keyframes fadein{
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }100%{
+    opacity: 1;
+    transform: none;
+  }
+}
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #ccc;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #aaa;
+}
+.rightcontent .page h1,
+.rightcontent .page h2,
+.rightcontent .page h3,
+.rightcontent .page h4
+{
+  font-size: 28px;
+  font-weight: 400;
+  padding-left: 20px;
+  position: relative;
+  line-height: 40px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.rightcontent .page h2{
+  font-size: 24px;
+}
+.rightcontent .page h3{
+  font-size: 20px;
+}
+.rightcontent .page h4{
+  font-size: 18px;
+}
+.rightcontent .page h1::before,
+.rightcontent .page h2::before,
+.rightcontent .page h3::before,
+.rightcontent .page h4::before
+{
+  content:'';
+  width: 3px;
+  height: 20px;
+  background-color: #09f;
+  position: absolute;
+  top:20px;
+  left:0px;
+  border-radius: 3px;
+}
+.rightcontent .page p{
+  text-indent: 20px;
+}
+
+.projectlist li{
+  width: calc(100% - 50px);
+  margin: 15px;
+  padding: 10px;
+  list-style: none;
+  box-shadow: #ccc 0 1px 5px;
+}
+.projectlist li:hover{
+  box-shadow: #ccc 0 1px 10px;
+}
+.projectlist li .title{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.projectlist li .exp{
+  font-size: 14px;
+  color: #666;
+}
+.projectlist li a{
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: #09f;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  display: inline-block;
+}
+.projectlist li a.githublink{
+  background-color: #333;
+}
+.projectlist li a.second{
+  background-color: #888;
+}
+.friendlist li{
+  width: calc(100% - 50px);
+  margin: 15px;
+  padding: 10px;
+  list-style: none;
+  box-shadow: #ccc 0 1px 5px;
+  overflow: hidden;
+  transition: all .3s;
+}
+.friendlist li:hover{
+  box-shadow: #ccc 0 1px 10px;
+}
+.friendlist li a{
+  color: #000;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.friendlist li img{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+.friendlist li .m{
+  float: left;
+}
+.friendlist li .title{
+  font-size: 20px;
+  line-height: 30px;
+}
+.friendlist li .desc{
+  font-size: 14px;
+  color: #666;
+}
+a{
+  color: #09f;
+  text-decoration: none;
+}
+a:hover{
+  color: #03f;
+}
