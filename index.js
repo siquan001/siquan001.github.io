@@ -1,3 +1,22 @@
+var l=window.location.href;
+setInterval(function(){
+  if(window.location.href!=l){
+    l=window.location.href;
+    ge(l);
+    gnav(l);
+  }
+},50)
+
+gnav(l);
+function gnav(l){
+  try{document.querySelector(".leftnav li.act").classList.remove('act');}catch(e){}
+  document.querySelectorAll(".leftnav li a").forEach(function(a){
+    if(a.href==l.replace(/#.*/,"").replace(/\?.*/,"")){
+      a.parentNode.classList.add("act");
+    }
+  })
+}
+
 function resize(){
   document.body.style.width=window.innerWidth+'px';
   document.body.style.height=window.innerHeight+'px';
@@ -54,54 +73,73 @@ function g(){
 }
 g();
 
-document.querySelectorAll('.leftnav ul li[data-class]').forEach(function(li){
-  li.onclick=function(){
-    document.querySelectorAll('.leftnav ul li[data-class]').forEach(function(li){li.classList.remove('act')});
-    this.classList.add('act');
-    var c=this.getAttribute('data-class');
-    window.location.hash=c;
+var u=new URL(window.location.href);
+if(u.pathname=='/'){
+  if(window.innerWidth>=700)golink('./about');
+  else{
+    document.querySelector(".rightcontent").classList.remove('show');
+    document.querySelector(".leftnav").classList.remove('hide');
+  }
+}else{
+  document.querySelector(".rightcontent").classList.add('show');
+  document.querySelector(".leftnav").classList.add('hide');
+}
+
+function golink(url){
+  history.pushState(null,null,url);
+}
+
+var reqc=null;
+function ge(url){
+  var u=new URL(url);
+  if(reqc){reqc.abort();reqc=null;}
+  document.querySelector(".loadprogress").classList.remove('loaded');
+  document.querySelector(".loadprogress").classList.add('loading');
+  if(u.pathname=='/'){
+    if(window.innerWidth>=700)golink('./about');
+    else{
+      document.querySelector(".rightcontent").classList.remove('show');
+      document.querySelector(".leftnav").classList.remove('hide');
+    }
+    document.querySelector(".loadprogress").classList.remove('loading');
+      document.querySelector(".loadprogress").classList.add('loaded');
+  }else{
+    get(url,function(res){
+      var r=res.match(/<!--content start-->[\s\S]*<!--content end-->/);
+      document.querySelector('.rightcontent').innerHTML=r[0];
+      var t=res.match(/<title>[\s\S]*<\/title>/);
+      t=t[0].replace('<title>','').replace('</title>','');
+      document.querySelector('title').innerHTML=t;
+      document.querySelector(".rightcontent").classList.add('show');
+      document.querySelector(".leftnav").classList.add('hide');
+      document.querySelector(".loadprogress").classList.remove('loading');
+      document.querySelector(".loadprogress").classList.add('loaded');
+    })
+    
+  }
+
+}
+function get(url,cb){
+  var xhr=new XMLHttpRequest();
+  xhr.open('get',url,true);
+  xhr.send();
+  xhr.onreadystatechange=function(){
+    if(xhr.readyState==4){
+      cb(xhr.responseText);
+    }
+  }
+  return {
+    abort:function(){
+      xhr.abort();
+    }
+  }
+}
+
+document.querySelectorAll("a[nocross]").forEach(function(e){
+  e.onclick=function(e){
+    e.preventDefault();
+    golink(this.href);
   }
 })
 
-var xhr=new XMLHttpRequest();
-xhr.open('get','./friendlink.json');
-xhr.onreadystatechange=function(){
-  if(xhr.readyState==4&&xhr.status==200){
-    var data=JSON.parse(xhr.responseText);
-    var str='';
-    data.forEach(function(item){
-      str+='<li><a href="'+item.url+'" target="_blank"><img src="'+item.icon+'"/><div class="m"><div class="title">'+item.title+'</div><div class="desc">'+item.desc+'</div></div></a></li>';
-    });
-    document.querySelector('.friendlist').innerHTML=str;
-  }
-}
-xhr.send();
 
-window.onhashchange=function(){
-  console.log('change');
-  chuli()
-}
-
-function chuli(){
-  var hash=location.hash;
-  console.log(hash);
-  if(hash){
-    document.querySelector(".rightcontent").classList.add('show');
-    document.querySelector(".leftnav").classList.add('hide');
-    document.querySelectorAll('.page').forEach(function(p){p.style.display=""});
-    try{
-      document.querySelector(".page."+hash.slice(1)).style.display='block';
-    }catch(e){
-
-    }
-  }else{
-    document.querySelector(".rightcontent").classList.remove('show');
-    document.querySelector(".leftnav").classList.remove('hide');
-    if(window.innerWidth>=700){
-      setTimeout(function(){
-        document.querySelector('.leftnav ul li[data-class="about"]').click();
-      },100)
-    }
-  }
-}
-chuli();
