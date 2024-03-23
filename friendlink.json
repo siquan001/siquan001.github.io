@@ -6,10 +6,10 @@
     "desc":"让生活充满色彩，让梦想更加绚丽"
   },
   {
-    "url":"https://edgebook.link/",
+    "url":"https://space.bilibili.com/3493080911055200/",
     "title":"edgebook",
     "icon":"https://dl3.img.timecdn.cn/2023/08/06/logo-3.png",
-    "desc":"不知道"
+    "desc":"MacOS的内核叫XNU，等于MacOS X is not unix，可人家是纯正的unix血脉"
   },
   {
     "url":"https://cifeng.top/",
@@ -36,7 +36,18 @@
     "desc":"(留空)"
   },
   {
-    "url":"mailto:chensiquan2022@163.com",
+    "url":"https://yuluo.xyz/",
+    "title":"Senc森辞知识分享站",
+    "icon":"https://yuluo.xyz/wp-content/uploads/2024/03/%E5%9C%86%E8%A7%92-b_8517927ee5c8e1d55be0ebdfc7bfd78e.png",
+    "desc":"想学编程？就来Senc森辞知识分享站！"
+  },
+  {
+    "url":"https://siquan001.github.io/",
+    "title":"陈思全的小站（本站）",
+    "icon":"/favicon.ico",
+    "desc":"海内存知己，天涯若比邻。"
+  },{
+    "url":"mailto:chensiquan2023@qq.com",
     "title":"快快添加友链吧！",
     "icon":"/favicon.ico",
     "desc":"Email: chensiquan2023@qq.com"

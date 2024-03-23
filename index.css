@@ -151,6 +151,11 @@ body{
 ::-webkit-scrollbar-thumb:hover{
   background-color: #aaa;
 }
+.rightcontent blockquote{
+  padding: 10px;
+  background-color: rgb(169, 255, 255);
+  border-radius: 10px;
+}
 .rightcontent h1,
 .rightcontent h2,
 .rightcontent h3,

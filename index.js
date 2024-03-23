@@ -26,6 +26,7 @@ window.addEventListener('resize',resize);
 
 var says=[
   "海内存知己，天涯若比邻。",
+  "慢慢来，别着急。",
   "己所不欲，勿施于人",
   "保持健康和开心才是最重要的",
   "做自己喜欢的事，做快乐的事",
