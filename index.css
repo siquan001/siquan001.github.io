@@ -262,6 +262,9 @@ body{
   font-size: 20px;
   line-height: 30px;
 }
+.friendlist li a.no{
+  opacity: .5;
+}
 .friendlist li .desc{
   font-size: 14px;
   color: #666;
