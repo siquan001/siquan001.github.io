@@ -108,7 +108,13 @@ body{
   font-size: 16px;
   overflow: auto;
 }
+.mobs{
+  display: none;
+}
 @media(max-width:700px){
+  .mobs{
+    display: block;
+  }
   .rightcontent{
     display: none;
   }
@@ -116,14 +122,14 @@ body{
   {
     display: block;
     width: calc(100% - 50px);
-    height: calc(100% - 50px);
+    height: calc(100% - 70px);
     left:5px;
     top:5px;
   }
   .leftnav{
     display: block;
     width: calc(100% - 10px);
-    height: calc(100% - 10px);
+    height: calc(100% - 30px);
     left:5px;
     top:5px;
   }
@@ -310,4 +316,23 @@ a:hover{
   width: 100%;
   opacity: 0;
   display: block;
+}
+.moebeian{
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ccc;
+}
+.moebeian a{
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(0,0,0,.3);
+  padding: 0 10px;
+}
+.moebeian a:hover{
+  color: rgb(255, 219, 250);
 }
