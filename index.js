@@ -168,3 +168,17 @@ var says=[
     dos();
   }
   g();
+
+  document.querySelector('.warma-back-top').onclick=function(){
+    // 平滑滚动到顶部
+    var scrollTop=document.querySelector('.right').scrollTop;
+    var speed=scrollTop/10;
+    var timer=setInterval(function(){
+      if(scrollTop<=0){
+        clearInterval(timer);
+      }else{
+        document.querySelector('.right').scrollTop=scrollTop-speed;
+        scrollTop=document.querySelector('.right').scrollTop;
+      }
+    },10)
+  }
