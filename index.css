@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     cursor: url('./cursors/arrow.png'),auto;
+    transition: background-color .3s;
 }
 ::-webkit-scrollbar{
     cursor: url('./cursors/arrow.png'),auto;
@@ -21,9 +22,6 @@ a,.qplayer .btn,.back{
     width: 100%;
     animation: wbp 2s ease-in-out infinite;
     cursor: url('./cursors/arrow.png'),auto;
-}
-.warma-back-top:hover img{
-    animation-play-state: paused;
 }
 @keyframes wbp{
     0%{

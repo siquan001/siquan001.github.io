@@ -123,7 +123,8 @@ var says=[
     "海内存知己，天涯若比邻。",
     "慢慢来，别着急。",
     "己所不欲，勿施于人",
-    "保持健康和开心才是最重要的",
+    "敢想敢做，敢拼敢争。",
+    "谦虚使人进步，骄傲使人落后。",
     "我已经完全爱上沃玛啦！！！"
   ]
   
@@ -170,15 +171,16 @@ var says=[
   g();
 
   document.querySelector('.warma-back-top').onclick=function(){
-    // 平滑滚动到顶部
-    var scrollTop=document.querySelector('.right').scrollTop;
-    var speed=scrollTop/10;
-    var timer=setInterval(function(){
-      if(scrollTop<=0){
-        clearInterval(timer);
-      }else{
-        document.querySelector('.right').scrollTop=scrollTop-speed;
-        scrollTop=document.querySelector('.right').scrollTop;
-      }
-    },10)
+    if(document.body.classList.contains('warma')){
+      delete localStorage.iswarma;
+      document.body.classList.remove('warma');
+    }else{
+      localStorage.iswarma=1;
+      document.body.classList.add('warma');
+    }
+  }
+  
+
+  if(localStorage.iswarma){
+    document.body.classList.add('warma');
   }
