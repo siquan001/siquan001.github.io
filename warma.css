@@ -1,26 +1,39 @@
 body.warma{
-    background-color: #a18d93;
+    background-color: #ff968a;
+    background-image: none;
     font-weight: bold;
 }
-body.warma{
-    color: #533334;
+
+body.warma .container{
+    color: #ff968a;
 }
-body.warma .right .page.index .links a{
+
+body.warma .leftbar .name{
+    color:#fd4a3d;
+}
+
+body.warma .right .page h1,
+body.warma .right .page h2
+{
+    color:#fd5145;
+    text-shadow:#ff968a 0 0 3px;
+}
+body.warma .right .page a
+{
+    box-shadow: none;
+    background-color: #fd5145;
+    border-radius: 5px;
     color: #fff;
+    text-decoration: none;
 }
-body.warma .qplayer{
-    background-color: #a18d93;
-}
+
 body.warma .qplayer .bg{
     display: none;
 }
-body.warma .left .avatar img{
+body.warma .leftbar .avatar img{
     border-radius: 50%;
-    border: #533334 3px solid;
-}
-body.warma .right .page h2{
-    color: #f9dc88;
-    text-shadow: #533334 0 3px, #533334 0 -3px, #533334 3px 0px, #533334 -3px 0px;
+    border: #fd5145 2px solid;
+    box-shadow: #ff968a 0 0 5px;
 }
 body.warma .right .page.index .links a
 {
@@ -28,12 +41,8 @@ body.warma .right .page.index .links a
     background-color: #533334;
     border-radius: 5px;
 }
-body.warma .right .page .line{
-    background-color: #533334;
-    height: 3px;
-}
 body.warma ::-webkit-scrollbar-thumb{
-    background-color: #533334;
+    background-color: #fd5145;
 }
 body.warma .right .page p a,
 body.warma .moebeian a{
@@ -45,25 +54,24 @@ body.warma .moebeian a:hover{
     color:#533334;
 }
 body.warma .skills .item .r{
-    background-color: #f9dc88;
     height: 10px;
     border-radius: 10px;
     margin: 10px;
 }
 body.warma .skills .item .r div{
-    background-color: #533334;
+    background-color: #ff968a;
     height: 10px;
     border-radius: 10px;
 }
 body.warma .projectlist li,
 body.warma .friendlist li{
-    background-color: #533334;
+    background-color: #fd5145;
     border-radius: 5px;
 }
 
 body.warma .projectlist li .title,
 body.warma .friendlist li .title{
-    color:#f9dc88
+    color:#fff
 }
 body.warma .projectlist li .exp,
 body.warma .friendlist li .desc{
@@ -76,53 +84,29 @@ body.warma .friendlist li img{
     height: 36px;
 }
 body.warma .projectlist li a{
-    background-color: #f9dc88!important;
-    color: #533334!important;
+    background-color: #fff!important;
+    color: #fd5145!important;
     text-shadow: none;
 }
 body.warma .projectlist li a:hover{
-    background-color: #533334!important;
-    color: #f9dc88!important;
+    background-color: #fd5145!important;
+    color: #fff!important;
 }
-
-body.warma .left .title{
-    color: #f9dc88;
-    text-shadow: #533334 0 3px, #533334 0 -3px, #533334 3px 0px, #533334 -3px 0px;
-    padding-top: 10px;
+body.warma .socials .item{
+    background-color: #fcc7c4;
 }
-body.warma .left .says{
-    color: #533334;
-}
-body.warma .left .back{
-    color: #533334;
-    text-shadow: none;
-    font-weight: bold;
-}
-body.warma .left .back:hover{
-    color: #f9dc88;
-}
-body.warma .left::after{
-    background-color: #533334;
-    width: 3px;
-}
-body.warma .lxms .item img{
-    padding: 10px;
-    border-radius: 50%;
-    background-color: #533334;
-    margin: 10px;
-}
-body.warma .lxms .item img:hover{
-    background-color: #f9dc88;
+body.warma .socials .item:hover{
+    background-color: #fd5145!important;
 }
 body.warma .qplayer{
     text-shadow: none;
     font-weight: bold;
-    background-color: rgb(189, 178, 181);
-    color: #533334;
-    border: #533334 2px solid;
+    background-color:#fcc7c4;
+    color: #fd5145;
+    border: #fd5145 2px solid;
 }
 body.warma .qplayer .img img{
-    border: #533334 3px solid;
+    border: #fd5145 3px solid;
     width: 54px;
     height: 54px;
 }
@@ -132,35 +116,33 @@ body.warma .qplayer .blc .range{
 body.warma .qplayer .blc .range .a,
 body.warma .qplayer .blc .range .b
 {
-    background-color: #533334;
+    background-color: #fd5145;
 }
 body.warma .qplayer .music-list{
-    background-color: #a18d93;
+    background-color: #ff968a;
     color: #fff;
-    border: #533334 2px solid;
-    background-color: #533334;
+    border: #fd5145 2px solid;
+    background-color: #fd5145;
 }
 body.warma .qplayer .music-list .item.active{
     color: #f9dc88;
 }
 body.warma .qplayer .music-list .item:hover{
-    background-color: #a18d93;
+    background-color: #ff968a;
 }
 body.warma .qplayer .glc .songdata .artist{
-    color: #533334;
+    color: #fd5145;
 }
 body.warma .qplayer .glc .songdata .name{
-    color:#533334;
+    color:#fd5145;
 }
 body.warma .moebeian{
     text-shadow: none;
 }
-@media(max-width:600px){
-    body.warma .left{
-        background-color: #a18d93;
-    }
-    body.warma .menu {
-        background-color: #533334;
-        color: #fff;
-    }
+body.warma .moebeian a{
+    color: #fd5145;
+}
+
+body.warma .starscover .star {
+    background-color: #fcc7c4!important;
 }
