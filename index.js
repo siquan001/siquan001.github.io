@@ -62,7 +62,8 @@ function initRouter() {
             initSkills();
         }
 
-        if(hash=='contact'){
+        if(hash=='contact'&&!window.loadedComments){
+            window.loadedComments = true;
             (function(d, s) {
                 var j, e = d.getElementsByTagName(s)[0];
          
