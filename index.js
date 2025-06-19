@@ -333,6 +333,28 @@ function initWarmaStyle() {
     }
 }
 
+function initSusie(){
+    $('.susie').addEventListener('click', function () {
+        let m=['你获得了番茄酱*1',"你获得了一把带血的刀","你获得了一把梳子","Susie停止了微笑并把你的厨艺指南砸向你","Susie想让你帮它充160160<{}>","Susie点了一下烤箱上的按钮"];
+        let rid=parseInt(Math.random()*4);
+        if(rid==3){
+            let gid=parseInt(Math.random()*4);
+            if(gid==3){
+                let qid=parseInt(Math.random()*4);
+                if(qid==3){
+                    alert("Susie亲吻了一下你的脸颊");
+                }else{
+                    alert(m[5]);
+                }
+            }else{
+                alert(m[3+gid]);
+            }
+        }else{
+            alert(m[rid]);
+        }
+    })
+}
+
 initRouter();
 resizeWindow();
 initPlayer();
@@ -340,3 +362,4 @@ initSays();
 initStars();
 initMenuBtn();
 initWarmaStyle();
+initSusie();
